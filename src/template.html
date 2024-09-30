@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="id">
+      <!-- Sidebar section for user info and task menu -->
+      <aside class="sidebar">
+        <section class="username">
+          <div class="userInfo">
+            <img src="https://via.placeholder.com/50" alt="User logo" />
+            <p>username</p>
+          </div>
+          <img src="https://via.placeholder.com/50" alt="Logout icon" />
+        </section>
+
+        <nav class="taskMenu">
+          <button class="newTask">
+            <img src="https://via.placeholder.com/50" alt="Plus icon" />
+            <p>New Task</p>
+          </button>
+
+          <div class="taskInfo">
+            <div class="taskInbox">
+              <img src="https://via.placeholder.com/50" alt="Task inbox icon" />
+              <p>Inbox</p>
+            </div>
+
+            <div class="todayInfo">
+              <img
+                src="https://via.placeholder.com/50"
+                alt="Today's tasks icon"
+              />
+              <p>Today</p>
+            </div>
+
+            <div class="searchFilters">
+              <img
+                src="https://via.placeholder.com/50"
+                alt="Search and filters icon"
+              />
+              <p>Search & Filters</p>
+            </div>
+          </div>
+
+          <section class="projectsList">
+            <div class="projectsTitle">
+              <p>Projects</p>
+              <button id="newProjectButton">+</button>
+            </div>
+            <div id="projectsList"></div>
+          </section>
+        </nav>
+      </aside>
+
+      <!-- Main container for general information -->
+      <section class="generalContainer">
+        <header class="generalInfo">
+          <h1>General</h1>
+          <p>Container project for uncategorized todos</p>
+          <button class="newTask">
+            <img src="https://via.placeholder.com/50" alt="Plus icon" />
+            <p>New Task</p>
+          </button>
+        </header>
+
+        <div class="toDoList" id="toDoList"></div>
+      </section>
+
+      <form id="taskForm" style="display: none">
+        <button type="button" class="close-button">X</button>
+        <label for="taskName">Title:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          required
+        ></textarea>
+
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate" required />
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <label for="project">Project:</label>
+        <select id="project" name="project" required>
+          <option value="general">General</option>
+          <option value="project1">Project 1</option>
+          <option value="project2">Project 2</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+      </form>
+
+      <form id="projectForm" style="display: none">
+        <button type="button" class="close-button">X</button>
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="projectName" name="projectName" required />
+        <button type="submit">Add Project</button>
+      </form>
+    </main>
+  </body>
+</html>
