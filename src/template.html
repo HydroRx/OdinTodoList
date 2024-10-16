@@ -6,109 +6,60 @@
     <title>Document</title>
   </head>
   <body>
-    <main id="id">
-      <!-- Sidebar section for user info and task menu -->
-      <aside class="sidebar">
-        <section class="username">
-          <div class="userInfo">
-            <img src="https://via.placeholder.com/50" alt="User logo" />
-            <p>username</p>
-          </div>
-          <img src="https://via.placeholder.com/50" alt="Logout icon" />
-        </section>
+    <div class="container">
+      <aside class="sidebar">Sidebar</aside>
+      <main class="content">
+        <div class="titleSpread">
+          <h1>Todo List</h1>
+          <button class="add-button">Add new task</button>
+          <form class="add-form hidden">
+            <input
+              type="text"
+              class="titleInput"
+              value="Title"
+              maxlength="40"
+            />
+            <input
+              type="text"
+              class="descInput"
+              value="Description"
+              maxlength="80"
+            />
+            <button type="submit">Save</button>
+            <button type="button" class="cancel-add">Cancel</button>
+          </form>
+        </div>
 
-        <nav class="taskMenu">
-          <button class="newTask">
-            <img src="https://via.placeholder.com/50" alt="Plus icon" />
-            <p>New Task</p>
-          </button>
-
-          <div class="taskInfo">
-            <div class="taskInbox">
-              <img src="https://via.placeholder.com/50" alt="Task inbox icon" />
-              <p>Inbox</p>
-            </div>
-
-            <div class="todayInfo">
-              <img
-                src="https://via.placeholder.com/50"
-                alt="Today's tasks icon"
-              />
-              <p>Today</p>
-            </div>
-
-            <div class="searchFilters">
-              <img
-                src="https://via.placeholder.com/50"
-                alt="Search and filters icon"
-              />
-              <p>Search & Filters</p>
-            </div>
-          </div>
-
-          <section class="projectsList">
-            <div class="projectsTitle">
-              <p>Projects</p>
-              <button id="newProjectButton">+</button>
-            </div>
-            <div id="projectsList"></div>
-          </section>
-        </nav>
-      </aside>
-
-      <!-- Main container for general information -->
-      <section class="generalContainer">
-        <header class="generalInfo">
-          <h1>General</h1>
-          <p>Container project for uncategorized todos</p>
-          <button class="newTask">
-            <img src="https://via.placeholder.com/50" alt="Plus icon" />
-            <p>New Task</p>
-          </button>
-        </header>
-
-        <div class="toDoList" id="toDoList"></div>
-      </section>
-
-      <form id="taskForm" style="display: none">
-        <button type="button" class="close-button">X</button>
-        <label for="taskName">Title:</label>
-        <input type="text" id="title" name="title" required />
-
-        <label for="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          rows="4"
-          required
-        ></textarea>
-
-        <label for="dueDate">Due Date:</label>
-        <input type="date" id="dueDate" name="dueDate" required />
-
-        <label for="priority">Priority:</label>
-        <select id="priority" name="priority" required>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-
-        <label for="project">Project:</label>
-        <select id="project" name="project" required>
-          <option value="general">General</option>
-          <option value="project1">Project 1</option>
-          <option value="project2">Project 2</option>
-        </select>
-
-        <button type="submit">Add Task</button>
-      </form>
-
-      <form id="projectForm" style="display: none">
-        <button type="button" class="close-button">X</button>
-        <label for="projectName">Project Name:</label>
-        <input type="text" id="projectName" name="projectName" required />
-        <button type="submit">Add Project</button>
-      </form>
-    </main>
+        <div class="list-container">
+          <ul>
+            <li>
+              <div>
+                <h2 class="todoTitle">hello</h2>
+                <p class="listItemDescription hidden">
+                  It's hasdasdsadas dasdasdasdj
+                </p>
+                <form class="edit-form hidden">
+                  <input
+                    type="text"
+                    class="edit-input"
+                    value="hello"
+                    maxlength="40"
+                  />
+                  <button type="submit">Save</button>
+                  <button type="button" class="cancel-edit">Cancel</button>
+                </form>
+              </div>
+              <div class="buttonsDiv">
+                <button>V</button>
+                <button>X</button>
+                <button class="edit-button">Edit</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">Footer Content</footer>
+    </div>
+    <script src="index.js" type="module" defer></script>
   </body>
 </html>
